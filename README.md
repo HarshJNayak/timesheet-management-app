@@ -31,7 +31,7 @@ npm install
 3. Run the development server
 npm run dev
 
-4.The app will be available at http://localhost:3000
+4.The app will be available at http://localhost:3000/login
 
 ## Technologies Used
 
