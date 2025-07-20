@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Timesheet Management App
 
-## Getting Started
+This is a simple timesheet tracking application built using Next.js 15, TypeScript, and Tailwind CSS. It includes a login screen, a dashboard with weekly summaries, and a list view to manage daily task entries for each week.
 
-First, run the development server:
+## Features
+
+- Dummy login system (no real authentication)
+- Dashboard displaying weekly timesheet status
+- List view showing detailed daily tasks for a selected week
+- Ability to add, edit, and delete tasks
+- Tasks stored temporarily in localStorage (no backend)
+- Weekly progress calculated with a cap of 8 hours per day
+- Conditional UI:
+  - "Completed" (green) if 40 hours logged
+  - "Incomplete" (yellow) if some hours logged
+  - "Missing" (red) if no hours logged
+- Responsive layout with Tailwind CSS
+- Hover and active UI states for buttons and menu
+
+## Setup Instructions
+
+1. Clone the repository
 
 ```bash
+git clone https://github.com/HarshJNayak/timesheet-management-app.git
+cd timesheet-management-app
+
+2. Install dependencies
+npm install
+
+3. Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4.The app will be available at http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js 15 (App Router)  
+- TypeScript  
+- Tailwind CSS  
+- LocalStorage for state persistence  
+- React Hooks (`useState`, `useEffect`)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Assumptions and Notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- No backend or authentication system is implemented  
+- All timesheet data is stored in `localStorage` and resets on browser refresh  
+- Only one dummy user is supported at a time  
+- The "Create" button appears only once for a given week with no existing data  
+- A maximum of 8 hours per day counts toward the 40-hour weekly progress bar
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Time Spent
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Approximately 48 hours
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Project setup and login: 6–8 hours  
+- Dashboard and list view logic: 20 hours  
+- LocalStorage handling and UI states: 8–10 hours  
+- Styling, responsiveness, and interactivity: 10–12 hours
+
+
+## Future Improvements
+
+- Real authentication using NextAuth or Firebase  
+- Persistent backend storage (e.g. Supabase or MongoDB)  
+- Better error handling and input validation  
+- Support for multiple users and weeks  
+- Unit and integration tests
+
+
+Author
+Harsh Nayak
+Frontend Developer
+
+
